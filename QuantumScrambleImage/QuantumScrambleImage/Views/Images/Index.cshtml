@@ -4,6 +4,19 @@
     ViewData["Title"] = "Index";
 }
 <hr />
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>        
+             <div class="form-group">              
+                <a asp-action="Create" class="btn btn-info">Add Photo</a>
+              
+                
+            </div>
+        </form>
+    </div>
+</div>
 
 <div class="row">
     <div class="col-md-12">
@@ -54,14 +67,15 @@
     </div>
 </div>
 
-@* <partial name="_DeleteDialog" /> *@
+<partial name="_DeleteDialog" />
 
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
     <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-    <script src="/js/deleteDialog.js"></script>
+    <script src="~/js/deletedialog.js"></script>    
+    
     <script type="text/javascript">
         $(document).ready(function () {
             $('#MyTable').DataTable({
@@ -75,7 +89,7 @@
             });
 
             // Delete item
-            sc_deleteDialog.openModal('deleteItem', true, 'btnYesDelete', '/Users/DeleteImagePatient/', false);
+            sc_deleteDialog.openModal('deleteItem', true, 'btnYesDelete', '/Images/DeleteImage/', false);
 
         });
     </script>

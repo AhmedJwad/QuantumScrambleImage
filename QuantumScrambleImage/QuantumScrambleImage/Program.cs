@@ -2,12 +2,14 @@ using Microsoft.EntityFrameworkCore;
 using QuantumScrambleImage.Data;
 using QuantumScrambleImage.Helpers;
 using QuantumScrambleImage.Migrations;
+using Vereyon.Web;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<Seed>();
+builder.Services.AddFlashMessage();
 
 builder.Services.AddDbContext<DataContext>(o =>
 {
