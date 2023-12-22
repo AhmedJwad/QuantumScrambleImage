@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34310.174
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantumScrambleImage", "QuantumScrambleImage\QuantumScrambleImage.csproj", "{FCAFD7A4-2492-4DB2-B8EB-09BE46334402}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumScrambleImage", "QuantumScrambleImage\QuantumScrambleImage.csproj", "{FCAFD7A4-2492-4DB2-B8EB-09BE46334402}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantumScrampleImage.Common", "QuantumScrampleImage.Common\QuantumScrampleImage.Common.csproj", "{1B8103E5-E908-4E34-9FE0-DAD4988538A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{FCAFD7A4-2492-4DB2-B8EB-09BE46334402}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCAFD7A4-2492-4DB2-B8EB-09BE46334402}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCAFD7A4-2492-4DB2-B8EB-09BE46334402}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B8103E5-E908-4E34-9FE0-DAD4988538A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B8103E5-E908-4E34-9FE0-DAD4988538A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B8103E5-E908-4E34-9FE0-DAD4988538A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B8103E5-E908-4E34-9FE0-DAD4988538A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
