@@ -16,6 +16,7 @@ builder.Services.AddDbContext<DataContext>(o =>
     o.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 builder.Services.AddScoped<IBlobHelper, BlobHelper>();
+builder.Services.AddScoped<IConverter, Converter>();
 var app = builder.Build();
 SeedData();
 void SeedData()
