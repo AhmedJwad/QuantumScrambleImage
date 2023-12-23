@@ -335,9 +335,360 @@ namespace QuantumScrambleImage.Helpers
 
             return processedQuantumState;
         }
+        public StringBuilder ScrambleQuantumCircuit5(StringBuilder quantumState)
+        {
+            StringBuilder processedQuantumState = new StringBuilder(quantumState.ToString());
 
+            for (int k = 0; k < quantumState.Length; k += 8)
+            {
+                // Apply Toffoli gate between position[0], position[1], and position[3]
+                ApplyToffoliGate(processedQuantumState, k, k + 1, k + 3);
 
+                // Apply CNot gate between position[3] and position[2]
+                ApplyCNotGate(processedQuantumState, k + 3, k + 2);
 
+                // Apply Toffoli gate between position[7], position[1], and position[0]
+                ApplyToffoliGate(processedQuantumState, k + 7, k + 1, k);
+
+                // Apply CNot gate between position[1] and position[4]
+                ApplyCNotGate(processedQuantumState, k + 1, k + 4);
+
+                // Apply Toffoli gate between position[4], position[3], and position[1]
+                ApplyToffoliGate(processedQuantumState, k + 4, k + 3, k + 1);
+
+                // Apply Not gate at position[7]
+                ApplyNotGate(processedQuantumState, k + 7);
+
+                // Apply Swap gate between position[5] and position[6]
+                ApplySwapGate(processedQuantumState, k + 5, k + 6);
+            }
+
+            return processedQuantumState;
+        }
+        public StringBuilder InverseScrambleQuantumCircuit5(StringBuilder quantumState)
+        {
+            StringBuilder processedQuantumState = new StringBuilder(quantumState.ToString());
+
+            for (int k = quantumState.Length - 8; k >= 0; k -= 8)
+            {
+                // Apply Swap gate between position[5] and position[6]
+                ApplySwapGate(processedQuantumState, k + 5, k + 6);
+
+                // Apply Not gate at position[7]
+                ApplyNotGate(processedQuantumState, k + 7);
+
+                // Apply Toffoli gate between position[4], position[3], and position[1]
+                ApplyToffoliGate(processedQuantumState, k + 4, k + 3, k + 1);
+
+                // Apply CNot gate between position[1] and position[4]
+                ApplyCNotGate(processedQuantumState, k + 1, k + 4);
+
+                // Apply Toffoli gate between position[7], position[1], and position[0]
+                ApplyToffoliGate(processedQuantumState, k + 7, k + 1, k);
+
+                // Apply CNot gate between position[3] and position[2]
+                ApplyCNotGate(processedQuantumState, k + 3, k + 2);
+
+                // Apply Toffoli gate between position[0], position[1], and position[3]
+                ApplyToffoliGate(processedQuantumState, k, k + 1, k + 3);
+            }
+
+            return processedQuantumState;
+        }
+        public StringBuilder ScrambleQuantumCircuit6(StringBuilder quantumState)
+        {
+            StringBuilder processedQuantumState = new StringBuilder(quantumState.ToString());
+
+            for (int k = 0; k < quantumState.Length; k += 8)
+            {
+                // Apply Swap gate between position[0] and position[7]
+                ApplySwapGate(processedQuantumState, k, k + 7);
+
+                // Apply Toffoli gate between position[2], position[3], and position[5]
+                ApplyToffoliGate(processedQuantumState, k + 2, k + 3, k + 5);
+
+                // Apply CNot gate between position[2] and position[4]
+                ApplyCNotGate(processedQuantumState, k + 2, k + 4);
+
+                // Apply CNot gate between position[4] and position[2]
+                ApplyCNotGate(processedQuantumState, k + 4, k + 2);
+
+                // Apply CNot gate between position[5] and position[2]
+                ApplyCNotGate(processedQuantumState, k + 5, k + 2);
+
+                // Apply Not gate at position[1]
+                ApplyNotGate(processedQuantumState, k + 1);
+
+                // Apply Not gate at position[7]
+                ApplyNotGate(processedQuantumState, k + 7);
+            }
+
+            return processedQuantumState;
+        }
+        public StringBuilder InverseScrambleQuantumCircuit6(StringBuilder quantumState)
+        {
+            StringBuilder processedQuantumState = new StringBuilder(quantumState.ToString());
+
+            for (int k = quantumState.Length - 8; k >= 0; k -= 8)
+            {
+                // Apply Not gate at position[7]
+                ApplyNotGate(processedQuantumState, k + 7);
+
+                // Apply Not gate at position[1]
+                ApplyNotGate(processedQuantumState, k + 1);
+
+                // Apply CNot gate between position[5] and position[2]
+                ApplyCNotGate(processedQuantumState, k + 5, k + 2);
+
+                // Apply CNot gate between position[4] and position[2]
+                ApplyCNotGate(processedQuantumState, k + 4, k + 2);
+
+                // Apply CNot gate between position[2] and position[4]
+                ApplyCNotGate(processedQuantumState, k + 2, k + 4);
+
+                // Apply Toffoli gate between position[2], position[3], and position[5]
+                ApplyToffoliGate(processedQuantumState, k + 2, k + 3, k + 5);
+
+                // Apply Swap gate between position[0] and position[7]
+                ApplySwapGate(processedQuantumState, k, k + 7);
+            }
+
+            return processedQuantumState;
+        }
+        public StringBuilder ScrambleQuantumCircuit7(StringBuilder quantumState)
+        {
+            StringBuilder processedQuantumState = new StringBuilder(quantumState.ToString());
+
+            for (int k = 0; k < quantumState.Length; k += 8)
+            {
+                // Apply CNOT gate between position[7] and position[6]
+                ApplyCNotGate(processedQuantumState, k + 7, k + 6);
+
+                // Apply CNOT gate between position[6] and position[5]
+                ApplyCNotGate(processedQuantumState, k + 6, k + 5);
+
+                // Apply CNOT gate between position[5] and position[4]
+                ApplyCNotGate(processedQuantumState, k + 5, k + 4);
+
+                // Apply CNOT gate between position[4] and position[3]
+                ApplyCNotGate(processedQuantumState, k + 4, k + 3);
+
+                // Apply CNOT gate between position[3] and position[2]
+                ApplyCNotGate(processedQuantumState, k + 3, k + 2);
+
+                // Apply CNOT gate between position[2] and position[1]
+                ApplyCNotGate(processedQuantumState, k + 2, k + 1);
+
+                // Apply CNOT gate between position[1] and position[0]
+                ApplyCNotGate(processedQuantumState, k + 1, k);
+            }
+
+            return processedQuantumState;
+        }
+        public StringBuilder InverseScrambleQuantumCircuit7(StringBuilder quantumState)
+        {
+            StringBuilder processedQuantumState = new StringBuilder(quantumState.ToString());
+
+            for (int k = quantumState.Length - 8; k >= 0; k -= 8)
+            {
+                // Apply CNOT gate between position[1] and position[0]
+                ApplyCNotGate(processedQuantumState, k + 1, k);
+
+                // Apply CNOT gate between position[2] and position[1]
+                ApplyCNotGate(processedQuantumState, k + 2, k + 1);
+
+                // Apply CNOT gate between position[3] and position[2]
+                ApplyCNotGate(processedQuantumState, k + 3, k + 2);
+
+                // Apply CNOT gate between position[4] and position[3]
+                ApplyCNotGate(processedQuantumState, k + 4, k + 3);
+
+                // Apply CNOT gate between position[5] and position[4]
+                ApplyCNotGate(processedQuantumState, k + 5, k + 4);
+
+                // Apply CNOT gate between position[6] and position[5]
+                ApplyCNotGate(processedQuantumState, k + 6, k + 5);
+
+                // Apply CNOT gate between position[7] and position[6]
+                ApplyCNotGate(processedQuantumState, k + 7, k + 6);
+            }
+
+            return processedQuantumState;
+        }
+        public StringBuilder ScrambleQuantumCircuit8(StringBuilder quantumState)
+        {
+            StringBuilder processedQuantumState = new StringBuilder(quantumState.ToString());
+
+            for (int k = 0; k < quantumState.Length; k += 8)
+            {
+                // Apply Toffoli gate between position[0], position[1], and position[2]
+                ApplyToffoliGate(processedQuantumState, k, k + 1, k + 2);
+
+                // Apply Toffoli gate between position[1], position[2], and position[3]
+                ApplyToffoliGate(processedQuantumState, k + 1, k + 2, k + 3);
+
+                // Apply Toffoli gate between position[2], position[3], and position[4]
+                ApplyToffoliGate(processedQuantumState, k + 2, k + 3, k + 4);
+
+                // Apply Toffoli gate between position[3], position[4], and position[5]
+                ApplyToffoliGate(processedQuantumState, k + 3, k + 4, k + 5);
+
+                // Apply Toffoli gate between position[4], position[5], and position[6]
+                ApplyToffoliGate(processedQuantumState, k + 4, k + 5, k + 6);
+
+                // Apply Toffoli gate between position[7], position[6], and position[0]
+                ApplyToffoliGate(processedQuantumState, k + 7, k + 6, k);
+            }
+
+            return processedQuantumState;
+        }
+        public StringBuilder InverseScrambleQuantumCircuit8(StringBuilder quantumState)
+        {
+            StringBuilder processedQuantumState = new StringBuilder(quantumState.ToString());
+
+            for (int k = quantumState.Length - 8; k >= 0; k -= 8)
+            {
+                // Apply inverse Toffoli gate between position[7], position[6], and position[0]
+                ApplyToffoliGate(processedQuantumState, k + 7, k + 6, k);
+
+                // Apply inverse Toffoli gate between position[4], position[5], and position[6]
+                ApplyToffoliGate(processedQuantumState, k + 4, k + 5, k + 6);
+
+                // Apply inverse Toffoli gate between position[3], position[4], and position[5]
+                ApplyToffoliGate(processedQuantumState, k + 3, k + 4, k + 5);
+
+                // Apply inverse Toffoli gate between position[2], position[3], and position[4]
+                ApplyToffoliGate(processedQuantumState, k + 2, k + 3, k + 4);
+
+                // Apply inverse Toffoli gate between position[1], position[2], and position[3]
+                ApplyToffoliGate(processedQuantumState, k + 1, k + 2, k + 3);
+
+                // Apply inverse Toffoli gate between position[0], position[1], and position[2]
+                ApplyToffoliGate(processedQuantumState, k, k + 1, k + 2);
+            }
+
+            return processedQuantumState;
+        }
+        public StringBuilder ScrambleQuantumCircuit9(StringBuilder quantumState)
+        {
+            StringBuilder processedQuantumState = new StringBuilder(quantumState.ToString());
+
+            for (int k = 0; k < quantumState.Length; k += 8)
+            {
+                // Apply Swap gate between position[0] and position[2]
+                ApplySwapGate(processedQuantumState, k, k + 2);
+
+                // Apply Toffoli gate between position[4], position[3], and position[0]
+                ApplyToffoliGate(processedQuantumState, k + 4, k + 3, k);
+
+                // Apply CNOT gate between position[5] and position[7]
+                ApplyCNotGate(processedQuantumState, k + 5, k + 7);
+
+                // Apply CNOT gate between position[6] and position[5]
+                ApplyCNotGate(processedQuantumState, k + 6, k + 5);
+
+                // Apply Not gate at position[3]
+                ApplyNotGate(processedQuantumState, k + 3);
+
+                // Apply Not gate at position[4]
+                ApplyNotGate(processedQuantumState, k + 4);
+
+                // Apply Toffoli gate between position[4], position[3], and position[1]
+                ApplyToffoliGate(processedQuantumState, k + 4, k + 3, k + 1);
+            }
+
+            return processedQuantumState;
+        }
+        public StringBuilder InverseScrambleQuantumCircuit9(StringBuilder quantumState)
+        {
+            StringBuilder processedQuantumState = new StringBuilder(quantumState.ToString());
+
+            for (int k = quantumState.Length - 8; k >= 0; k -= 8)
+            {
+                // Apply inverse Toffoli gate between position[4], position[3], and position[1]
+                ApplyToffoliGate(processedQuantumState, k + 4, k + 3, k + 1);
+
+                // Apply inverse Not gate at position[4]
+                ApplyNotGate(processedQuantumState, k + 4);
+
+                // Apply inverse Not gate at position[3]
+                ApplyNotGate(processedQuantumState, k + 3);
+
+                // Apply inverse CNOT gate between position[6] and position[5]
+                ApplyCNotGate(processedQuantumState, k + 6, k + 5);
+
+                // Apply inverse CNOT gate between position[5] and position[7]
+                ApplyCNotGate(processedQuantumState, k + 5, k + 7);
+
+                // Apply inverse Toffoli gate between position[4], position[3], and position[0]
+                ApplyToffoliGate(processedQuantumState, k + 4, k + 3, k);
+
+                // Apply inverse Swap gate between position[0] and position[2]
+                ApplySwapGate(processedQuantumState, k, k + 2);
+            }
+
+            return processedQuantumState;
+        }
+        public StringBuilder ScrambleQuantumCircuit10(StringBuilder quantumState)
+        {
+            StringBuilder processedQuantumState = new StringBuilder(quantumState.ToString());
+
+            for (int k = 0; k < quantumState.Length; k += 8)
+            {
+                // Apply CNOT gate between position[2] and position[3]
+                ApplyCNotGate(processedQuantumState, k + 2, k + 3);
+
+                // Apply CNOT gate between position[1] and position[0]
+                ApplyCNotGate(processedQuantumState, k + 1, k);
+
+                // Apply Toffoli gate between position[4], position[5], and position[6]
+                ApplyToffoliGate(processedQuantumState, k + 4, k + 5, k + 6);
+
+                // Apply Toffoli gate between position[7], position[6], and position[5]
+                ApplyToffoliGate(processedQuantumState, k + 7, k + 6, k + 5);
+
+                // Apply CNOT gate between position[4] and position[7]
+                ApplyCNotGate(processedQuantumState, k + 4, k + 7);
+
+                // Apply CNOT gate between position[1] and position[4]
+                ApplyCNotGate(processedQuantumState, k + 1, k + 4);
+
+                // Apply CNOT gate between position[0] and position[3]
+                ApplyCNotGate(processedQuantumState, k, k + 3);
+            }
+
+            return processedQuantumState;
+        }
+        public StringBuilder InverseScrambleQuantumCircuit10(StringBuilder quantumState)
+        {
+            StringBuilder processedQuantumState = new StringBuilder(quantumState.ToString());
+
+            for (int k = quantumState.Length - 8; k >= 0; k -= 8)
+            {
+                // Apply inverse CNOT gate between position[0] and position[3]
+                ApplyCNotGate(processedQuantumState, k, k + 3);
+
+                // Apply inverse CNOT gate between position[1] and position[4]
+                ApplyCNotGate(processedQuantumState, k + 1, k + 4);
+
+                // Apply inverse CNOT gate between position[4] and position[7]
+                ApplyCNotGate(processedQuantumState, k + 4, k + 7);
+
+                // Apply inverse Toffoli gate between position[7], position[6], and position[5]
+                ApplyToffoliGate(processedQuantumState, k + 7, k + 6, k + 5);
+
+                // Apply inverse Toffoli gate between position[4], position[5], and position[6]
+                ApplyToffoliGate(processedQuantumState, k + 4, k + 5, k + 6);
+
+                // Apply inverse CNOT gate between position[1] and position[0]
+                ApplyCNotGate(processedQuantumState, k + 1, k);
+
+                // Apply inverse CNOT gate between position[2] and position[3]
+                ApplyCNotGate(processedQuantumState, k + 2, k + 3);
+            }
+
+            return processedQuantumState;
+        }
 
     }
 }

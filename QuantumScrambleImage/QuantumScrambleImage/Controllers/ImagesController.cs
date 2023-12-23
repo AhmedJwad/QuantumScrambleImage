@@ -118,11 +118,35 @@ namespace QuantumScrambleImage.Controllers
             StringBuilder processedQuantumState2 = _converter.ScrambleQuantumCircuit2(processedQuantumState1);
             StringBuilder processedQuantumState3 = _converter.ScrambleQuantumCircuit3(processedQuantumState2);
             StringBuilder processedQuantumState4 = _converter.ScrambleQuantumCircuit4(processedQuantumState3);
-          
-            Bitmap outputImage = ConvertToImage(processedQuantumState4.ToString(), inputImage.Width, inputImage.Height);
-           
-            // Display the scrambled image          
-            outputImage.Save(Path.Combine(Directory.GetCurrentDirectory(), $"wwwroot\\images\\scrampleimage\\scrambledimages2" + ".jpg"));
+            StringBuilder processedQuantumState5 = _converter.ScrambleQuantumCircuit5(processedQuantumState4);
+            StringBuilder processedQuantumState6 = _converter.ScrambleQuantumCircuit6(processedQuantumState5);
+            StringBuilder processedQuantumState7 = _converter.ScrambleQuantumCircuit7(processedQuantumState6);
+            StringBuilder processedQuantumState8 = _converter.ScrambleQuantumCircuit8(processedQuantumState7);
+            StringBuilder processedQuantumState9 = _converter.ScrambleQuantumCircuit9(processedQuantumState8);
+            StringBuilder processedQuantumState10 = _converter.ScrambleQuantumCircuit10(processedQuantumState9);
+            
+
+            Bitmap outputImage = ConvertToImage(processedQuantumState10.ToString(), inputImage.Width, inputImage.Height);
+            
+           _converter.scrambleimage(outputImage);           
+            // Display the scrambled image            
+            outputImage.Save(Path.Combine(Directory.GetCurrentDirectory(), $"wwwroot\\images\\scrampleimage\\scrambledimages1" + ".jpg"));
+            StringBuilder DescrambleprocessedQuantumState1 = _converter.ReverseScrambleQuantumCircuit1(quantumState);
+            StringBuilder DescrambleprocessedQuantumState2 = _converter.ReverseScrambleQuantumCircuit2(DescrambleprocessedQuantumState1);
+            StringBuilder DescrambleprocessedQuantumState3 = _converter.InverseScrambleQuantumCircuit3(DescrambleprocessedQuantumState2);
+            StringBuilder DescrambleprocessedQuantumState4 = _converter.InverseScrambleQuantumCircuit4(DescrambleprocessedQuantumState3);
+            StringBuilder DescrambleprocessedQuantumState5 = _converter.InverseScrambleQuantumCircuit5(DescrambleprocessedQuantumState4);
+            StringBuilder DescrambleprocessedQuantumState6 = _converter.InverseScrambleQuantumCircuit6(DescrambleprocessedQuantumState5);
+            StringBuilder DescrambleprocessedQuantumState7 = _converter.InverseScrambleQuantumCircuit7(DescrambleprocessedQuantumState6);
+            StringBuilder DescrambleprocessedQuantumState8 = _converter.InverseScrambleQuantumCircuit8(DescrambleprocessedQuantumState7);
+            StringBuilder DescrambleprocessedQuantumState9 = _converter.InverseScrambleQuantumCircuit9(DescrambleprocessedQuantumState8);
+            StringBuilder DescrambleprocessedQuantumState10 = _converter.InverseScrambleQuantumCircuit10(DescrambleprocessedQuantumState9);
+
+            // _converter.scrambleimage(outputImage);
+            // Display the scrambled image
+            Bitmap outputImage1 = ConvertToImage(DescrambleprocessedQuantumState10.ToString(), inputImage.Width, inputImage.Height);
+            outputImage1.Save(Path.Combine(Directory.GetCurrentDirectory(), $"wwwroot\\images\\scrampleimage\\scrambledimages2" + ".jpg"));
+
             return RedirectToAction (nameof(Index));
         }
         

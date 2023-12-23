@@ -19,6 +19,17 @@ namespace QuantumScrambleImage.Helpers
         StringBuilder InverseScrambleQuantumCircuit3(StringBuilder quantumState);
         StringBuilder ScrambleQuantumCircuit4(StringBuilder quantumState);
         StringBuilder InverseScrambleQuantumCircuit4(StringBuilder quantumState);
-
+        StringBuilder ScrambleQuantumCircuit5(StringBuilder quantumState);
+        StringBuilder InverseScrambleQuantumCircuit5(StringBuilder quantumState);
+        StringBuilder ScrambleQuantumCircuit6(StringBuilder quantumState);
+        StringBuilder InverseScrambleQuantumCircuit6(StringBuilder quantumState);
+        StringBuilder ScrambleQuantumCircuit7(StringBuilder quantumState);
+        StringBuilder InverseScrambleQuantumCircuit7(StringBuilder quantumState);
+        StringBuilder ScrambleQuantumCircuit8(StringBuilder quantumState);
+        StringBuilder InverseScrambleQuantumCircuit8(StringBuilder quantumState);
+        StringBuilder ScrambleQuantumCircuit9(StringBuilder quantumState);
+        StringBuilder InverseScrambleQuantumCircuit9(StringBuilder quantumState);
+        StringBuilder ScrambleQuantumCircuit10(StringBuilder quantumState);
+        StringBuilder InverseScrambleQuantumCircuit10(StringBuilder quantumState);
     }
 }
