@@ -111,7 +111,7 @@ namespace QuantumScrambleImage.Controllers
             var httpClient = new HttpClient();
             var stream = await httpClient.GetStreamAsync(image.ImageFullPath);
             Bitmap inputImage = new Bitmap(stream);            
-             string Ahmed= _converter.ConvertToQuantumState2(inputImage);
+            string Ahmed= _converter.ConvertToQuantumState2(inputImage);           
             // Convert the string to a StringBuilder
             StringBuilder quantumState = new StringBuilder(Ahmed);
             StringBuilder processedQuantumState1 = _converter.ScrambleQuantumCircuit1(quantumState);
@@ -127,25 +127,25 @@ namespace QuantumScrambleImage.Controllers
             
 
             Bitmap outputImage = ConvertToImage(processedQuantumState10.ToString(), inputImage.Width, inputImage.Height);
-            
-           _converter.scrambleimage(outputImage);           
+
+            _converter.scrambleimage(outputImage);
             // Display the scrambled image            
             outputImage.Save(Path.Combine(Directory.GetCurrentDirectory(), $"wwwroot\\images\\scrampleimage\\scrambledimages1" + ".jpg"));
-            StringBuilder DescrambleprocessedQuantumState1 = _converter.ReverseScrambleQuantumCircuit1(quantumState);
-            StringBuilder DescrambleprocessedQuantumState2 = _converter.ReverseScrambleQuantumCircuit2(DescrambleprocessedQuantumState1);
-            StringBuilder DescrambleprocessedQuantumState3 = _converter.InverseScrambleQuantumCircuit3(DescrambleprocessedQuantumState2);
-            StringBuilder DescrambleprocessedQuantumState4 = _converter.InverseScrambleQuantumCircuit4(DescrambleprocessedQuantumState3);
-            StringBuilder DescrambleprocessedQuantumState5 = _converter.InverseScrambleQuantumCircuit5(DescrambleprocessedQuantumState4);
-            StringBuilder DescrambleprocessedQuantumState6 = _converter.InverseScrambleQuantumCircuit6(DescrambleprocessedQuantumState5);
-            StringBuilder DescrambleprocessedQuantumState7 = _converter.InverseScrambleQuantumCircuit7(DescrambleprocessedQuantumState6);
-            StringBuilder DescrambleprocessedQuantumState8 = _converter.InverseScrambleQuantumCircuit8(DescrambleprocessedQuantumState7);
-            StringBuilder DescrambleprocessedQuantumState9 = _converter.InverseScrambleQuantumCircuit9(DescrambleprocessedQuantumState8);
-            StringBuilder DescrambleprocessedQuantumState10 = _converter.InverseScrambleQuantumCircuit10(DescrambleprocessedQuantumState9);
+            //StringBuilder DescrambleprocessedQuantumState1 = _converter.ReverseScrambleQuantumCircuit1(quantumState);
+            //StringBuilder DescrambleprocessedQuantumState2 = _converter.ReverseScrambleQuantumCircuit2(DescrambleprocessedQuantumState1);
+            //StringBuilder DescrambleprocessedQuantumState3 = _converter.InverseScrambleQuantumCircuit3(DescrambleprocessedQuantumState2);
+            //StringBuilder DescrambleprocessedQuantumState4 = _converter.InverseScrambleQuantumCircuit4(DescrambleprocessedQuantumState3);
+            //StringBuilder DescrambleprocessedQuantumState5 = _converter.InverseScrambleQuantumCircuit5(DescrambleprocessedQuantumState4);
+            //StringBuilder DescrambleprocessedQuantumState6 = _converter.InverseScrambleQuantumCircuit6(DescrambleprocessedQuantumState5);
+            //StringBuilder DescrambleprocessedQuantumState7 = _converter.InverseScrambleQuantumCircuit7(DescrambleprocessedQuantumState6);
+            //StringBuilder DescrambleprocessedQuantumState8 = _converter.InverseScrambleQuantumCircuit8(DescrambleprocessedQuantumState7);
+            //StringBuilder DescrambleprocessedQuantumState9 = _converter.InverseScrambleQuantumCircuit9(DescrambleprocessedQuantumState8);
+            //StringBuilder DescrambleprocessedQuantumState10 = _converter.InverseScrambleQuantumCircuit10(DescrambleprocessedQuantumState9);
 
-            // _converter.scrambleimage(outputImage);
-            // Display the scrambled image
-            Bitmap outputImage1 = ConvertToImage(DescrambleprocessedQuantumState10.ToString(), inputImage.Width, inputImage.Height);
-            outputImage1.Save(Path.Combine(Directory.GetCurrentDirectory(), $"wwwroot\\images\\scrampleimage\\scrambledimages2" + ".jpg"));
+            //// _converter.scrambleimage(outputImage);
+            //// Display the scrambled image
+            //Bitmap outputImage1 = ConvertToImage(DescrambleprocessedQuantumState10.ToString(), inputImage.Width, inputImage.Height);
+            //outputImage1.Save(Path.Combine(Directory.GetCurrentDirectory(), $"wwwroot\\images\\scrampleimage\\scrambledimages1" + ".jpg"));
 
             return RedirectToAction (nameof(Index));
         }
@@ -175,7 +175,27 @@ namespace QuantumScrambleImage.Controllers
             return result;
         }
         
+        public async Task<IActionResult>Measurement(int? id)
+        {
+            if(id==null)
+            {
+                return NotFound();
+            }
+            Data.Entities.Image image = await _context.Images
+               .FirstOrDefaultAsync(x => x.Id == id);
+            if (image == null)
+            {
+                return NotFound();
+            }
+            ImageViewModel model = new()
+            {
+                Id = image.Id,
+                ImageId=image.ImageId,
 
+            };
+            model.ScrambleId = ($"images\\scrampleimage\\scrambledimages1" + ".jpg");
+            return View(model);
+        }
 
 
 
