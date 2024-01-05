@@ -17,6 +17,7 @@ builder.Services.AddDbContext<DataContext>(o =>
 });
 builder.Services.AddScoped<IBlobHelper, BlobHelper>();
 builder.Services.AddScoped<IConverter, Converter>();
+builder.Services.AddScoped<Ientropy, Entropy>();
 var app = builder.Build();
 SeedData();
 void SeedData()

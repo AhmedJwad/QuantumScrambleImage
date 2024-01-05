@@ -27,12 +27,15 @@ namespace QuantumScrambleImage.Controllers
         private readonly DataContext _context;
         private readonly IBlobHelper _blobHelper;
         private readonly IConverter _converter;
+        private readonly Ientropy _entropy;
 
-        public ImagesController(DataContext context, IBlobHelper blobHelper, IConverter converter)
+        public ImagesController(DataContext context, IBlobHelper blobHelper, IConverter converter,
+            Ientropy entropy)
         {
             _context = context;
             _blobHelper = blobHelper;
             _converter = converter;
+            _entropy = entropy;
         }
 
         public async Task< IActionResult> Index()
@@ -193,7 +196,30 @@ namespace QuantumScrambleImage.Controllers
                 ImageId=image.ImageId,
 
             };
+            //scramble Entropy
             model.ScrambleId = ($"images\\scrampleimage\\scrambledimages1" + ".jpg");
+            var httpClient = new HttpClient();
+            var stream = await httpClient.GetStreamAsync(model.ScrambleFullPath);
+            Bitmap scrambledImage = new Bitmap(stream);
+
+            // Convert the bitmap image to a 2D array of pixel values
+            int[,] pixelValues =_entropy.GetPixelValues(scrambledImage);
+
+            // Calculate global entropy
+           model.ScrambleEntropy =_entropy.CalculateGlobalEntropy(pixelValues);
+
+            //End scramble entropy
+            //original entropy
+            var httpClient1 = new HttpClient();
+            var stream1 = await httpClient.GetStreamAsync(model.ImageFullPath);
+            Bitmap originalImage = new Bitmap(stream1);
+
+            // Convert the bitmap image to a 2D array of pixel values
+            int[,] pixelValues1 = _entropy.GetPixelValues(originalImage);
+
+            // Calculate global entropy
+            model.OriginalEntropy = _entropy.CalculateGlobalEntropy(pixelValues1);
+            //end original entropy
             return View(model);
         }
 

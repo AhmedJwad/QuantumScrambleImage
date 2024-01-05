@@ -14,6 +14,10 @@ namespace QuantumScrambleImage.Models
         [Display(Name = "Scramble Photo")]
         public string ScrambleId { get; set; }
 
+        public double ScrambleEntropy { get; set; }
+
+        public double OriginalEntropy { get; set; }
+
         [Display(Name = "Original Photo")]
         public string ImageFullPath => ImageId == string.Empty
             ? $"https://localhost:7147/noimage.png"
