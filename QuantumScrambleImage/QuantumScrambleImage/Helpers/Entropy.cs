@@ -91,5 +91,21 @@ namespace QuantumScrambleImage.Helpers
 
             return pixelValues;
         }
+        public int[] CalculateHistogram(Bitmap bitmap)
+        {
+            int[] histogram = new int[256];
+
+            for (int x = 0; x < bitmap.Width; x++)
+            {
+                for (int y = 0; y < bitmap.Height; y++)
+                {
+                    Color pixelColor = bitmap.GetPixel(x, y);
+                    int intensity = pixelColor.R;
+                    histogram[intensity]++;
+                }
+            }
+
+            return histogram;
+        }
     }
 }

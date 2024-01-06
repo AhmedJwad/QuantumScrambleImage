@@ -8,5 +8,6 @@ namespace QuantumScrambleImage.Helpers
         double CalculateGlobalEntropy(int[,] image);
         double CalculateLocalEntropy(int[,] image, int blockSize);
         int[,] ExtractBlock(int[,] image, int startRow, int startCol, int blockSize);
+        int[] CalculateHistogram(Bitmap bitmap);
     }
 }

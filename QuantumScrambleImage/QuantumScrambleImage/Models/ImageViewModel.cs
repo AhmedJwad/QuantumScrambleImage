@@ -18,6 +18,10 @@ namespace QuantumScrambleImage.Models
 
         public double OriginalEntropy { get; set; }
 
+        public int[] Scramblehistogram { get; set; }
+
+        public int[] originalhistogram { get; set; }
+
         [Display(Name = "Original Photo")]
         public string ImageFullPath => ImageId == string.Empty
             ? $"https://localhost:7147/noimage.png"

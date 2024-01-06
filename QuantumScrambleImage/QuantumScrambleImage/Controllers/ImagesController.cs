@@ -219,6 +219,30 @@ namespace QuantumScrambleImage.Controllers
 
             // Calculate global entropy
             model.OriginalEntropy = _entropy.CalculateGlobalEntropy(pixelValues1);
+            
+            //calculate histgrame
+
+           model.Scramblehistogram = _entropy.CalculateHistogram(scrambledImage);
+
+            // Display histogram values
+            for (int i = 0; i < model.Scramblehistogram.Length; i++)
+            {
+                Console.WriteLine($"Intensity Level {i}: {model.Scramblehistogram[i]}");
+            }
+
+            // Prepare chart data
+            ViewData["HistogramData"] = model.Scramblehistogram;
+
+            model.originalhistogram = _entropy.CalculateHistogram(originalImage);
+
+            // Display histogram values
+            for (int i = 0; i < model.originalhistogram.Length; i++)
+            {
+                Console.WriteLine($"Intensity Level {i}: {model.originalhistogram[i]}");
+            }
+
+            // Prepare chart data
+            ViewData["HistogramData1"] = model.originalhistogram;
             //end original entropy
             return View(model);
         }
