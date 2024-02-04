@@ -54,7 +54,7 @@
       
     </div>
     <!-- Inner -->
-</div>
+
 <!-- Carousel wrapper -->
 <!-- Large modal -->
 
@@ -79,13 +79,830 @@
         </div>
     </div>
 </div>
+<div class="carousel-inner py-4">
+    <!-- Single item -->
+    <div class="carousel-item active">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <img src="@Model.ImageFullPath"
+                             class="card-img-top"
+                             alt="Waterfall" />
+                        <div class="card-body">
+                            <h5 class="card-title">Original Image</h5>
+                            <p class="card-text">
+                                Entropy: @Model.OriginalEntropy
+                            </p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".originalhistgrame">Histgrame</button>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col-lg-4 d-none d-lg-block">
+                    <div class="card">
+                        <img src="@Model.ScrambleFullPath2"
+                             class="card-img-top"
+                             alt="Sunset Over the Sea" />
+                        <div class="card-body">
+                            <h5 class="card-title">Scramble Image</h5>
+                            <p class="card-text">
+                                Entropy: @Model.ScrambleEntropy2
+                            </p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Histgrame</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Inner -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div style="width: 80%;">
+                <canvas id="histogramChart2"></canvas>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal fade originalhistgrame" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div style="width: 80%;">
+                <canvas id="histogramChart1"></canvas>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="carousel-inner py-4">
+    <!-- Single item -->
+    <div class="carousel-item active">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <img src="@Model.ImageFullPath"
+                             class="card-img-top"
+                             alt="Waterfall" />
+                        <div class="card-body">
+                            <h5 class="card-title">Original Image</h5>
+                            <p class="card-text">
+                                Entropy: @Model.OriginalEntropy
+                            </p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".originalhistgrame">Histgrame</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 d-none d-lg-block">
+                    <div class="card">
+                        <img src="@Model.ScrambleFullPath3"
+                             class="card-img-top"
+                             alt="Sunset Over the Sea" />
+                        <div class="card-body">
+                            <h5 class="card-title">Scramble Image</h5>
+                            <p class="card-text">
+                                Entropy: @Model.ScrambleEntropy3
+                            </p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Histgrame</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Inner -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div style="width: 80%;">
+                <canvas id="histogramChart3"></canvas>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal fade originalhistgrame" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div style="width: 80%;">
+                <canvas id="histogramChart1"></canvas>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="carousel-inner py-4">
+    <!-- Single item -->
+    <div class="carousel-item active">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <img src="@Model.ImageFullPath"
+                             class="card-img-top"
+                             alt="Waterfall" />
+                        <div class="card-body">
+                            <h5 class="card-title">Original Image</h5>
+                            <p class="card-text">
+                                Entropy: @Model.OriginalEntropy
+                            </p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".originalhistgrame">Histgrame</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 d-none d-lg-block">
+                    <div class="card">
+                        <img src="@Model.ScrambleFullPath4"
+                             class="card-img-top"
+                             alt="Sunset Over the Sea" />
+                        <div class="card-body">
+                            <h5 class="card-title">Scramble Image</h5>
+                            <p class="card-text">
+                                Entropy: @Model.ScrambleEntropy4
+                            </p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Histgrame</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Inner -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div style="width: 80%;">
+                <canvas id="histogramChart4"></canvas>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal fade originalhistgrame" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div style="width: 80%;">
+                <canvas id="histogramChart1"></canvas>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="carousel-inner py-4">
+    <!-- Single item -->
+    <div class="carousel-item active">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <img src="@Model.ImageFullPath"
+                             class="card-img-top"
+                             alt="Waterfall" />
+                        <div class="card-body">
+                            <h5 class="card-title">Original Image</h5>
+                            <p class="card-text">
+                                Entropy: @Model.OriginalEntropy
+                            </p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".originalhistgrame">Histgrame</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 d-none d-lg-block">
+                    <div class="card">
+                        <img src="@Model.ScrambleFullPath5"
+                             class="card-img-top"
+                             alt="Sunset Over the Sea" />
+                        <div class="card-body">
+                            <h5 class="card-title">Scramble Image</h5>
+                            <p class="card-text">
+                                Entropy: @Model.ScrambleEntropy5
+                            </p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Histgrame</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Inner -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div style="width: 80%;">
+                <canvas id="histogramChart5"></canvas>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal fade originalhistgrame" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div style="width: 80%;">
+                <canvas id="histogramChart1"></canvas>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="carousel-inner py-4">
+    <!-- Single item -->
+    <div class="carousel-item active">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <img src="@Model.ImageFullPath"
+                             class="card-img-top"
+                             alt="Waterfall" />
+                        <div class="card-body">
+                            <h5 class="card-title">Original Image</h5>
+                            <p class="card-text">
+                                Entropy: @Model.OriginalEntropy
+                            </p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".originalhistgrame">Histgrame</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 d-none d-lg-block">
+                    <div class="card">
+                        <img src="@Model.ScrambleFullPath6"
+                             class="card-img-top"
+                             alt="Sunset Over the Sea" />
+                        <div class="card-body">
+                            <h5 class="card-title">Scramble Image</h5>
+                            <p class="card-text">
+                                Entropy: @Model.ScrambleEntropy6
+                            </p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Histgrame</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Inner -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div style="width: 80%;">
+                <canvas id="histogramChart5"></canvas>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal fade originalhistgrame" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div style="width: 80%;">
+                <canvas id="histogramChart6"></canvas>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="carousel-inner py-4">
+    <!-- Single item -->
+    <div class="carousel-item active">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <img src="@Model.ImageFullPath"
+                             class="card-img-top"
+                             alt="Waterfall" />
+                        <div class="card-body">
+                            <h5 class="card-title">Original Image</h5>
+                            <p class="card-text">
+                                Entropy: @Model.OriginalEntropy
+                            </p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".originalhistgrame">Histgrame</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 d-none d-lg-block">
+                    <div class="card">
+                        <img src="@Model.ScrambleFullPath7"
+                             class="card-img-top"
+                             alt="Sunset Over the Sea" />
+                        <div class="card-body">
+                            <h5 class="card-title">Scramble Image</h5>
+                            <p class="card-text">
+                                Entropy: @Model.ScrambleEntropy7
+                            </p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Histgrame</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Inner -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div style="width: 80%;">
+                <canvas id="histogramChart5"></canvas>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal fade originalhistgrame" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div style="width: 80%;">
+                <canvas id="histogramChart6"></canvas>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="carousel-inner py-4">
+    <!-- Single item -->
+    <div class="carousel-item active">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <img src="@Model.ImageFullPath"
+                             class="card-img-top"
+                             alt="Waterfall" />
+                        <div class="card-body">
+                            <h5 class="card-title">Original Image</h5>
+                            <p class="card-text">
+                                Entropy: @Model.OriginalEntropy
+                            </p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".originalhistgrame">Histgrame</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 d-none d-lg-block">
+                    <div class="card">
+                        <img src="@Model.ScrambleFullPath8"
+                             class="card-img-top"
+                             alt="Sunset Over the Sea" />
+                        <div class="card-body">
+                            <h5 class="card-title">Scramble Image</h5>
+                            <p class="card-text">
+                                Entropy: @Model.ScrambleEntropy8
+                            </p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Histgrame</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Inner -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div style="width: 80%;">
+                <canvas id="histogramChart5"></canvas>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal fade originalhistgrame" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div style="width: 80%;">
+                <canvas id="histogramChart8"></canvas>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="carousel-inner py-4">
+    <!-- Single item -->
+    <div class="carousel-item active">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <img src="@Model.ImageFullPath"
+                             class="card-img-top"
+                             alt="Waterfall" />
+                        <div class="card-body">
+                            <h5 class="card-title">Original Image</h5>
+                            <p class="card-text">
+                                Entropy: @Model.OriginalEntropy
+                            </p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".originalhistgrame">Histgrame</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 d-none d-lg-block">
+                    <div class="card">
+                        <img src="@Model.ScrambleFullPath9"
+                             class="card-img-top"
+                             alt="Sunset Over the Sea" />
+                        <div class="card-body">
+                            <h5 class="card-title">Scramble Image</h5>
+                            <p class="card-text">
+                                Entropy: @Model.ScrambleEntropy9
+                            </p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Histgrame</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Inner -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div style="width: 80%;">
+                <canvas id="histogramChart1"></canvas>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal fade originalhistgrame" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div style="width: 80%;">
+                <canvas id="histogramChart9"></canvas>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="carousel-inner py-4">
+    <!-- Single item -->
+    <div class="carousel-item active">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <img src="@Model.ImageFullPath"
+                             class="card-img-top"
+                             alt="Waterfall" />
+                        <div class="card-body">
+                            <h5 class="card-title">Original Image</h5>
+                            <p class="card-text">
+                                Entropy: @Model.OriginalEntropy
+                            </p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".originalhistgrame">Histgrame</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 d-none d-lg-block">
+                    <div class="card">
+                        <img src="@Model.ScrambleFullPath10"
+                             class="card-img-top"
+                             alt="Sunset Over the Sea" />
+                        <div class="card-body">
+                            <h5 class="card-title">Scramble Image</h5>
+                            <p class="card-text">
+                                Entropy: @Model.ScrambleEntropy10
+                            </p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Histgrame</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Inner -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div style="width: 80%;">
+                <canvas id="histogramChart1"></canvas>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal fade originalhistgrame" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div style="width: 80%;">
+                <canvas id="histogramChart10"></canvas>
+            </div>
+
+        </div>
+    </div>
+</div>
 @section scripts {
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         var histogramData = @Html.Raw(Json.Serialize(Model.Scramblehistogram));
 
         var ctx = document.getElementById('histogramChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: Array.from({ length: histogramData.length }, (_, i) => i.toString()),
+                datasets: [{
+                    label: 'Intensity Level',
+                    data: histogramData,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        type: 'linear',
+                        position: 'bottom'
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+    <script>
+        var histogramData = @Html.Raw(Json.Serialize(Model.Scramblehistogram2));
+        var ctx = document.getElementById('histogramChart2').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: Array.from({ length: histogramData.length }, (_, i) => i.toString()),
+                datasets: [{
+                    label: 'Intensity Level',
+                    data: histogramData,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        type: 'linear',
+                        position: 'bottom'
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+    <script>
+        var histogramData = @Html.Raw(Json.Serialize(Model.Scramblehistogram3));
+
+        var ctx = document.getElementById('histogramChart3').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: Array.from({ length: histogramData.length }, (_, i) => i.toString()),
+                datasets: [{
+                    label: 'Intensity Level',
+                    data: histogramData,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        type: 'linear',
+                        position: 'bottom'
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+    <script>
+        var histogramData = @Html.Raw(Json.Serialize(Model.Scramblehistogram4));
+
+        var ctx = document.getElementById('histogramChart4').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: Array.from({ length: histogramData.length }, (_, i) => i.toString()),
+                datasets: [{
+                    label: 'Intensity Level',
+                    data: histogramData,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        type: 'linear',
+                        position: 'bottom'
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+    <script>
+        var histogramData = @Html.Raw(Json.Serialize(Model.Scramblehistogram5));
+
+        var ctx = document.getElementById('histogramChart5').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: Array.from({ length: histogramData.length }, (_, i) => i.toString()),
+                datasets: [{
+                    label: 'Intensity Level',
+                    data: histogramData,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        type: 'linear',
+                        position: 'bottom'
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+    <script>
+        var histogramData = @Html.Raw(Json.Serialize(Model.Scramblehistogram6));
+
+        var ctx = document.getElementById('histogramChart6').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: Array.from({ length: histogramData.length }, (_, i) => i.toString()),
+                datasets: [{
+                    label: 'Intensity Level',
+                    data: histogramData,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        type: 'linear',
+                        position: 'bottom'
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+    <script>
+        var histogramData = @Html.Raw(Json.Serialize(Model.Scramblehistogram7));
+
+        var ctx = document.getElementById('histogramChart7').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: Array.from({ length: histogramData.length }, (_, i) => i.toString()),
+                datasets: [{
+                    label: 'Intensity Level',
+                    data: histogramData,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        type: 'linear',
+                        position: 'bottom'
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+    <script>
+        var histogramData = @Html.Raw(Json.Serialize(Model.Scramblehistogram7));
+
+        var ctx = document.getElementById('histogramChart8').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: Array.from({ length: histogramData.length }, (_, i) => i.toString()),
+                datasets: [{
+                    label: 'Intensity Level',
+                    data: histogramData,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        type: 'linear',
+                        position: 'bottom'
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+    <script>
+        var histogramData = @Html.Raw(Json.Serialize(Model.Scramblehistogram9));
+
+        var ctx = document.getElementById('histogramChart9').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: Array.from({ length: histogramData.length }, (_, i) => i.toString()),
+                datasets: [{
+                    label: 'Intensity Level',
+                    data: histogramData,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        type: 'linear',
+                        position: 'bottom'
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+    <script>
+        var histogramData = @Html.Raw(Json.Serialize(Model.Scramblehistogram10));
+
+        var ctx = document.getElementById('histogramChart10').getContext('2d');
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {

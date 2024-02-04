@@ -66,4 +66,8 @@
     <None Include="wwwroot\lib\jquery\dist\jquery.min.map" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\QSharpLibrary1\QSharpLibrary1.csproj" />
+  </ItemGroup>
+
 </Project>

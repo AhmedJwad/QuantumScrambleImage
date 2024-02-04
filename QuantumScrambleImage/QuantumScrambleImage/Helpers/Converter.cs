@@ -1,5 +1,8 @@
-﻿using System.Drawing;
+﻿using Microsoft.Quantum.Simulation.Core;
+using Microsoft.Quantum.Simulation.Simulators;
+using System.Drawing;
 using System.Text;
+
 
 namespace QuantumScrambleImage.Helpers
 {
@@ -57,7 +60,7 @@ namespace QuantumScrambleImage.Helpers
         {
             StringBuilder processedQuantumState = new StringBuilder(quantumState.ToString());
 
-            for (int k = 0; k < quantumState.Length; k += 8)
+            for (int k = 0; k < quantumState.Length; k += 9)
             {
                 // Apply CNot gate between position[0] and position[2]
                 ApplyCNotGate(processedQuantumState, k, k + 2);
@@ -87,7 +90,7 @@ namespace QuantumScrambleImage.Helpers
         {
             StringBuilder processedQuantumState = new StringBuilder(quantumState.ToString());
 
-            for (int k = quantumState.Length - 8; k >= 0; k -= 8)
+            for (int k = quantumState.Length - 8; k >= 0; k -= 9)
             {
                 // Apply CNot gate between position[7] and position[5]
                 ApplyCNotGate(processedQuantumState, k + 7, k + 5);
@@ -156,7 +159,7 @@ namespace QuantumScrambleImage.Helpers
         {
             StringBuilder processedQuantumState = new StringBuilder(quantumState.ToString());
 
-            for (int k = 0; k < quantumState.Length; k += 8)
+            for (int k = 0; k < quantumState.Length; k += 9)
             {
                 // Apply CNot gate between position[0] and position[1]
                 ApplyCNotGate(processedQuantumState, k, k + 1);
@@ -219,7 +222,7 @@ namespace QuantumScrambleImage.Helpers
         public StringBuilder ScrambleQuantumCircuit3(StringBuilder quantumState)
         {
             StringBuilder processedQuantumState = new StringBuilder(quantumState.ToString());
-            for (int k = quantumState.Length - 8; k >= 0; k -= 8)
+            for (int k = quantumState.Length - 8; k >= 0; k -= 9)
             {
 
                 // Apply CNOT gate between position[1] and position[0]
@@ -689,6 +692,6 @@ namespace QuantumScrambleImage.Helpers
 
             return processedQuantumState;
         }
-
+      
     }
 }

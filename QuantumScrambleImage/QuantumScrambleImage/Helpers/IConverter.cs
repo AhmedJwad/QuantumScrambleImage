@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using Microsoft.Quantum.Simulation.Simulators;
+using System.Drawing;
 using System.Text;
 
 namespace QuantumScrambleImage.Helpers
@@ -31,5 +32,7 @@ namespace QuantumScrambleImage.Helpers
         StringBuilder InverseScrambleQuantumCircuit9(StringBuilder quantumState);
         StringBuilder ScrambleQuantumCircuit10(StringBuilder quantumState);
         StringBuilder InverseScrambleQuantumCircuit10(StringBuilder quantumState);
+
+        
     }
 }
